@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webify with Arpit - Bring Your Website Vision to Life</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 25%, #2d3561 50%, #1a1f3a 75%, #0a0e27 100%);
+            color: #fff;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Enhanced Background Animations - Website Development Theme */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        /* Floating Code Snippets */
+        .floating-code {
+            position: absolute;
+            font-family: 'Courier New', monospace;
+            color: rgba(74, 144, 226, 0.08);
+            font-size: 12px;
+            white-space: pre;
+            animation: codeFloat 25s linear infinite;
+            font-weight: 500;
+        }
+
+        .floating-code:nth-child(1) {
+            top: 5%;
+            left: 2%;
+            animation-delay: 0s;
+        }
+
+        .floating-code:nth-child(2) {
+            top: 15%;
+            right: 5%;
+            animation-delay: -8s;
+        }
+
+        .floating-code:nth-child(3) {
+            top: 40%;
+            left: 8%;
+            animation-delay: -15s;
+        }
+
+        .floating-code:nth-child(4) {
+            bottom: 30%;
+            right: 10%;
+            animation-delay: -22s;
+        }
+
+        .floating-code:nth-child(5) {
+            bottom: 10%;
+            left: 15%;
+            animation-delay: -30s;
+        }
+
+        @keyframes codeFloat {
+            0% {
+                transform: translateY(0px) translateX(0px) rotate(0deg);
+                opacity: 0.05;
+            }
+
+            25% {
+                transform: translateY(-15px) translateX(10px) rotate(2deg);
+                opacity: 0.12;
+            }
+
+            50% {
+                transform: translateY(-30px) translateX(-5px) rotate(-1deg);
+                opacity: 0.08;
+            }
+
+            75% {
+                transform: translateY(-15px) translateX(15px) rotate(1deg);
+                opacity: 0.1;
+            }
+
+            100% {
+                transform: translateY(0px) translateX(0px) rotate(0deg);
+                opacity: 0.05;
+            }
+        }
+
+        /* Floating HTML/CSS/JS Elements */
+        .floating-tech {
+            position: absolute;
+            font-size: 1.5rem;
+            color: rgba(74, 144, 226, 0.1);
+            animation: techFloat 20s ease-in-out infinite;
+            font-weight: bold;
+        }
+
+        .floating-tech.html {
+            top: 20%;
+            left: 5%;
+            color: rgba(227, 79, 38, 0.15);
+            animation-delay: 0s;
+        }
+
+        .floating-tech.css {
+            top: 60%;
+            right: 8%;
+            color: rgba(21, 114, 182, 0.15);
+            animation-delay: -7s;
+        }
+
+        .floating-tech.js {
+            bottom: 40%;
+            left: 10%;
+            color: rgba(247, 223, 30, 0.15);
+            animation-delay: -14s;
+        }
+
+        .floating-tech.react {
+            top: 30%;
+            right: 15%;
+            color: rgba(97, 218, 251, 0.15);
+            animation-delay: -21s;
+        }
+
+        @keyframes techFloat {
+
+            0%,
+            100% {
+                transform: translateY(0px) scale(1) rotate(0deg);
+                opacity: 0.1;
+            }
+
+            50% {
+                transform: translateY(-25px) scale(1.1) rotate(180deg);
+                opacity: 0.2;
+            }
+        }
+
+        /* Binary Rain Animation */
+        .binary-rain {
+            position: absolute;
+            top: -100px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            color: rgba(74, 144, 226, 0.15);
+            animation: binaryFall 15s linear infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes binaryFall {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        /* WhatsApp Widget Styles */
+        .whatsapp-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .whatsapp-btn {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+            color: white;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.6), 0 0 0 10px rgba(37, 211, 102, 0.1);
+            }
+
+            100% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            }
+        }
+
+        /* Custom CSS Variables */
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #f39c12;
+            --accent-color: #e74c3c;
+            --dark-bg: #0a0e27;
+            --card-bg: rgba(255, 255, 255, 0.1);
+            --text-light: #ecf0f1;
+        }
+
+        /* Enhanced 3D Navigation */
+        .navbar {
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-link {
+            color: var(--text-light) !important;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+            transform: translateY(-2px);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section with Enhanced 3D Effects */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #2d3561 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(circle at 20% 20%, rgba(74, 144, 226, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 30%, rgba(243, 156, 18, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 40% 70%, rgba(74, 144, 226, 0.15) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff, var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(74, 144, 226, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(74, 144, 226, 0.4);
+            color: white;
+            text-decoration: none;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        /* Modern Glassmorphism Cards */
+        .service-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.15),
+                0 10px 20px rgba(74, 144, 226, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(145deg, rgba(74, 144, 226, 0.1), rgba(243, 156, 18, 0.05));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            border-radius: 30px;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(74, 144, 226, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: all 0.4s ease;
+            transform: scale(0);
+        }
+
+        .service-card:hover {
+            transform: translateY(-20px) scale(1.03);
+            box-shadow:
+                0 40px 80px rgba(0, 0, 0, 0.25),
+                0 20px 40px rgba(74, 144, 226, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-card:hover::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Enhanced Pricing Cards */
+        .pricing-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.15),
+                0 10px 20px rgba(74, 144, 226, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(145deg, rgba(74, 144, 226, 0.1), rgba(243, 156, 18, 0.05));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            border-radius: 30px;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-20px) scale(1.05);
+            box-shadow:
+                0 50px 100px rgba(74, 144, 226, 0.2),
+                0 25px 50px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+
+        .pricing-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Enhanced Portfolio Cards */
+        .portfolio-item {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            height: 100%;
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.15),
+                0 10px 20px rgba(74, 144, 226, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        .portfolio-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(145deg, rgba(74, 144, 226, 0.1), rgba(243, 156, 18, 0.05));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 1;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-20px) scale(1.03);
+            box-shadow:
+                0 50px 100px rgba(74, 144, 226, 0.2),
+                0 25px 50px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+
+        .portfolio-item:hover::before {
+            opacity: 1;
+        }
+
+        /* Enhanced Contact Form Card */
+        .contact-form {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            padding: 2.5rem;
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.15),
+                0 10px 20px rgba(74, 144, 226, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        /* Enhanced Contact Info Card */
+        .contact-info {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.15),
+                0 10px 20px rgba(74, 144, 226, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-description {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Pricing Section */
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-price {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pricing-features li {
+            padding: 0.3rem 0;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+        }
+
+        /* Why Choose Us */
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateX(10px);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .feature-text {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Portfolio Section */
+        .portfolio-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .portfolio-image i {
+            font-size: 4rem;
+            color: white;
+            z-index: 2;
+            position: relative;
+        }
+
+        .portfolio-content {
+            padding: 2rem;
+        }
+
+        .portfolio-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-description {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .portfolio-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            background: rgba(74, 144, 226, 0.2);
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .portfolio-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .portfolio-links a {
+            position: relative;
+            z-index: 10;
+        }
+
+        .portfolio-btn {
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .portfolio-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .portfolio-btn.primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+        }
+
+        .portfolio-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(74, 144, 226, 0.3);
+        }
+
+        /* Contact Form */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-check {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-check-label {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .form-check-label a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .form-check-label a:hover {
+            text-decoration: underline;
+        }
+
+        .form-check-input:checked {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .form-label {
+            color: var(--text-light);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .form-control {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 0.8rem 1rem;
+            color: var(--text-light);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+            outline: none;
+            color: var(--text-light);
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Fix select dropdown styling */
+        select.form-control {
+            background: rgba(255, 255, 255, 0.15);
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        select.form-control option {
+            background: var(--dark-bg);
+            color: var(--text-light);
+            padding: 0.5rem;
+            border: none;
+        }
+
+        select.form-control option:hover {
+            background: rgba(74, 144, 226, 0.2);
+        }
+
+        select.form-control option:checked {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 25px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(74, 144, 226, 0.3);
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-text {
+            color: var(--text-light);
+        }
+
+        .qr-code {
+            max-width: 150px;
+            height: 150px;
+            border-radius: 15px;
+            margin: 1rem auto;
+            background: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animations */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.2rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .service-card {
+                margin-bottom: 1rem;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(10, 14, 39, 0.95);
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Terms Modal Styling */
+        .modal-content {
+            background: var(--dark-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+        }
+
+        .modal-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-title {
+            color: var(--primary-color);
+        }
+
+        .modal-body {
+            color: var(--text-light);
+        }
+
+        .terms-item {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-animation">
+        <div class="floating-code">
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;title&gt;Modern Website&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            &lt;div class="container"&gt;
+            &lt;header&gt;
+            &lt;nav class="navbar"&gt;
+            &lt;ul&gt;
+            &lt;li&gt;Home&lt;/li&gt;
+            &lt;li&gt;About&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/nav&gt;
+            &lt;/header&gt;
+            &lt;/div&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </div>
+
+        <div class="floating-code">
+            .hero {
+            background: linear-gradient(
+            135deg,
+            #667eea 0%,
+            #764ba2 100%
+            );
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+
+            .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            }
+
+            @media (max-width: 768px) {
+            .hero {
+            padding: 2rem 1rem;
+            }
+            }
+        </div>
+
+        <div class="floating-code">
+            function createWebsite() {
+            const framework = 'React';
+            const styling = 'CSS3';
+            const responsive = true;
+
+            if (responsive) {
+            return {
+            design: 'modern',
+            performance: 'optimized',
+            seo: 'friendly'
+            };
+            }
+
+            return buildAwesome();
+            }
+
+            const portfolio = [
+            'Personal Websites',
+            'Business Sites',
+            'E-commerce Stores'
+            ];
+
+            portfolio.forEach(project => {
+            console.log(`Building: ${project}`);
+            });
+        </div>
+
+        <div class="floating-code">
+            &lt;script&gt;
+            document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.querySelector('.navbar');
+            const hero = document.querySelector('.hero');
+
+            window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+            navbar.classList.add('scrolled');
+            } else {
+            navbar.classList.remove('scrolled');
+            }
+            });
+
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+            });
+            });
+            });
+            });
+            &lt;/script&gt;
+        </div>
+
+        <div class="floating-code">
+            import React from 'react';
+            import './App.css';
+
+            const WebsiteBuilder = () => {
+            const [projects, setProjects] = useState([]);
+
+            useEffect(() => {
+            fetchProjects();
+            }, []);
+
+            const fetchProjects = async () => {
+            const response = await fetch('/api/projects');
+            const data = await response.json();
+            setProjects(data);
+            };
+
+            return (
+            &lt;div className="app"&gt;
+            &lt;Header /&gt;
+            &lt;Hero /&gt;
+            &lt;Services /&gt;
+            &lt;Portfolio projects={projects} /&gt;
+            &lt;Contact /&gt;
+            &lt;Footer /&gt;
+            &lt;/div&gt;
+            );
+            };
+
+            export default WebsiteBuilder;
+        </div>
+
+        <div class="floating-tech html">&lt;HTML5/&gt;</div>
+        <div class="floating-tech css">{CSS3}</div>
+        <div class="floating-tech js">JavaScript()</div>
+        <div class="floating-tech react">&lt;React/&gt;</div>
+
+        <div class="binary-rain" style="left: 10%; animation-delay: 0s;">01001000 01010100 01001101 01001100</div>
+        <div class="binary-rain" style="left: 30%; animation-delay: -3s;">01000011 01010011 01010011 00110011</div>
+        <div class="binary-rain" style="left: 50%; animation-delay: -6s;">01001010 01010011 01000011 01010010</div>
+        <div class="binary-rain" style="left: 70%; animation-delay: -9s;">01010010 01000101 01000001 01000011</div>
+        <div class="binary-rain" style="left: 90%; animation-delay: -12s;">01001110 01001111 01000100 01000101</div>
+    </div>
+
+    <div class="whatsapp-widget">
+        <a href="https://wa.me/917892880377?text=Hi%20Arpit!%20I'm%20interested%20in%20your%20web%20development%20services.%20Can%20we%20discuss%20my%20project?"
+            target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-code"></i> Webify
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content" data-aos="fade-right">
+                    <h1 class="hero-title">Webify</h1>
+                    <p class="hero-subtitle">with Arpit</p>
+                    <h2 class="hero-description">Bring Your Website Vision to Life</h2>
+                    <p class="mb-4">Unlock a professional, high-performing online presence—tailored for individuals,
+                        startups, and established businesses.</p>
+                    <a href="#services" class="cta-button">
+                        <i class="fas fa-rocket me-2"></i>Get Started
+                    </a>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="text-center">
+                        <div class="floating">
+                            <i class="fas fa-laptop-code"
+                                style="font-size: 15rem; color: var(--primary-color); opacity: 0.3;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Our Services</h2>
+            <p class="section-subtitle" data-aos="fade-up">Professional web solutions tailored to your needs</p>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3 class="service-title">Personal Portfolio</h3>
+                        <p class="service-description">Showcase your skills and experience with a stunning personal
+                            portfolio website that makes you stand out.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="service-title">Landing Page</h3>
+                        <p class="service-description">Convert visitors into customers with high-converting landing
+                            pages designed for maximum impact.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="service-title">Business Website</h3>
+                        <p class="service-description">Professional business websites that establish credibility and
+                            drive growth for your company.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3 class="service-title">Product Showcase</h3>
+                        <p class="service-description">Display your products beautifully with engaging galleries and
+                            detailed product information.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="service-title">Event / Wedding</h3>
+                        <p class="service-description">Create memorable event websites with RSVP forms, photo galleries,
+                            and countdown timers.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3 class="service-title">Restaurant Site</h3>
+                        <p class="service-description">Appetizing restaurant websites with menu displays, location maps,
+                            and online reservations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Pricing Guide</h2>
+            <p class="section-subtitle" data-aos="fade-up">Transparent pricing for static/frontend websites</p>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Personal Portfolio</h3>
+                            <p class="pricing-price">₹5,000 - ₹10,000</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>3-5 pages (Home, About, Projects, Contact)</li>
+                            <li>Responsive design</li>
+                            <li>Contact forms</li>
+                            <li>Professional layout</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Small Business</h3>
+                            <p class="pricing-price">₹7,000 - ₹15,000</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>4-6 pages (Home, Services, About, Contact, Gallery)</li>
+                            <li>Contact form (no backend)</li>
+                            <li>SEO optimized</li>
+                            <li>Professional design</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Landing Page</h3>
+                            <p class="pricing-price">₹3,000 - ₹7,000</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>One-page scroll site</li>
+                            <li>CTA buttons</li>
+                            <li>Responsive layout</li>
+                            <li>Fast loading</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Event/Wedding</h3>
+                            <p class="pricing-price">₹5,000 - ₹12,000</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>3-5 pages</li>
+                            <li>RSVP form (dummy)</li>
+                            <li>Photo gallery</li>
+                            <li>Countdown timer</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Product Showcase</h3>
+                            <p class="pricing-price">₹7,000 - ₹15,000</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>3-6 pages to display products</li>
+                            <li>No cart functionality</li>
+                            <li>Image gallery and details</li>
+                            <li>Mobile responsive</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Restaurant Site</h3>
+                            <p class="pricing-price">₹6,000 - ₹12,000</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>Menu page, Home, About, Contact</li>
+                            <li>Location map embed</li>
+                            <li>Photo gallery</li>
+                            <li>Reservation info</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#termsModal">
+                    <i class="fas fa-file-contract me-2"></i>View Terms & Conditions
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Our Portfolio</h2>
+            <p class="section-subtitle" data-aos="fade-up">Recent projects showcasing our expertise</p>
+
+            <div class="row">
+                <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">CA Firm Website</h3>
+                            <p class="portfolio-description">
+                                A professional website for a chartered accountancy firm featuring service showcases,
+                                client testimonials, and appointment booking system. Built with modern design principles
+                                and optimized for lead generation.
+                            </p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">Responsive</span>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="https://www.abhijeetchoubyandassociates.com" class="portfolio-btn primary"
+                                    target="_blank">
+                                    <i class="fas fa-external-link-alt me-2"></i>Live Site
+                                </a>
+                                <a href="#contact" class="portfolio-btn">
+                                    <i class="fas fa-info-circle me-2"></i>Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">More Projects Coming Soon</h3>
+                            <p class="portfolio-description">
+                                We're constantly working on new exciting projects. Check back soon to see more
+                                of our latest work including e-commerce sites, restaurant websites, and
+                                innovative web applications.
+                            </p>
+                    
+                            <div class="portfolio-links">
+                                <a href="#contact" class="portfolio-btn primary">
+                                    <i class="fas fa-handshake me-2"></i>Work With Us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-3 col-6 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-item">
+                        <h3 class="stat-number"
+                            style="color: var(--secondary-color); font-size: 2.5rem; font-weight: bold;">1+</h3>
+                        <p style="color: var(--text-light);">Projects Completed</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-item">
+                        <h3 class="stat-number"
+                            style="color: var(--secondary-color); font-size: 2.5rem; font-weight: bold;">100%</h3>
+                        <p style="color: var(--text-light);">Client Satisfaction</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-center" data-aos="fade-up" data-aos-delay="500">
+                    <div class="stat-item">
+                        <h3 class="stat-number no-animate"
+                            style="color: var(--secondary-color); font-size: 2.5rem; font-weight: bold;">24/7</h3>
+                        <p style="color: var(--text-light);">Support Available</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-center" data-aos="fade-up" data-aos-delay="600">
+                    <div class="stat-item">
+                        <h3 class="stat-number no-animate"
+                            style="color: var(--secondary-color); font-size: 2.5rem; font-weight: bold;">3-7</h3>
+                        <p style="color: var(--text-light);">Days Delivery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="section-title text-start">Why Choose Us</h2>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="feature-text">Custom modern designs</div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="feature-text">Fast & secure development</div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="feature-text">Transparent pricing</div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="feature-text">Ongoing support</div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="contact-info">
+                        <div class="mb-4">
+                            <div class="display-4 mb-3" style="color: var(--secondary-color); font-weight: bold;">
+                                Starting at just ₹4,999
+                            </div>
+                        </div>
+
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Arpit Sharma</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem;">Freelance Web Developer</p>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">+91 7892880377</div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">webifywitharpit@gmail.com</div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <h5>WhatsApp</h5>
+                            <div class="contact-text">Quick Response</div>
+                            <div class="mt-2">
+                                <div class="qr-code">
+                                    <img src="./whatsapp qr.jpg" alt="WhatsApp QR Code"
+                                        style="width: 100%; height: 100%;">
+                                </div>
+                                <p style="color: rgba(255,255,255,0.7); font-size: 0.8rem; margin-top: 0.5rem;">
+                                    Scan to chat on WhatsApp
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+            <p class="section-subtitle" data-aos="fade-up">Ready to bring your website vision to life?</p>
+
+            <div class="row">
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-form">
+                        <h3 class="mb-4" style="color: var(--primary-color);">
+                            <i class="fas fa-paper-plane me-2"></i>Send Us a Message
+                        </h3>
+                        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                            <!-- Web3Forms Access Key -->
+                            <input type="hidden" name="access_key" value="30a211f2-88ee-4658-af8f-49454501c24d">
+
+                            <!-- Form Fields -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Your Name *</label>
+                                        <input type="text" class="form-control" name="name"
+                                            placeholder="Enter your full name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Email Address *</label>
+                                        <input type="email" class="form-control" name="email"
+                                            placeholder="your.email@example.com" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" name="phone"
+                                            placeholder="+91 12345 67890">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Project Type</label>
+                                        <select class="form-control" name="projectType">
+                                            <option value="">Select Project Type</option>
+                                            <option value="personal-portfolio">Personal Portfolio</option>
+                                            <option value="business-website">Business Website</option>
+                                            <option value="landing-page">Landing Page</option>
+                                            <option value="ecommerce">E-commerce Site</option>
+                                            <option value="restaurant">Restaurant Website</option>
+                                            <option value="event-wedding">Event/Wedding Site</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Budget Range</label>
+                                <select class="form-control" name="budget">
+                                    <option value="">Select Budget Range</option>
+                                    <option value="3000-7000">₹3,000 - ₹7,000</option>
+                                    <option value="7000-12000">₹7,000 - ₹12,000</option>
+                                    <option value="12000-20000">₹12,000 - ₹20,000</option>
+                                    <option value="20000+">₹20,000+</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Project Details *</label>
+                                <textarea class="form-control" name="message"
+                                    placeholder="Tell us about your project requirements, features you need, timeline, and any specific design preferences..."
+                                    required></textarea>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="termsCheck" required>
+                                <label class="form-check-label" for="termsCheck">
+                                    I agree to the
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms &
+                                        Conditions</a>.
+                                </label>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-rocket me-2"></i>Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-info">
+                        <h4 class="mb-4" style="color: var(--primary-color);">
+                            <i class="fas fa-address-book me-2"></i>Contact Information
+                        </h4>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h5>Arpit Sharma</h5>
+                            <div class="contact-text">Freelance Web Developer</div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h5>Call Us</h5>
+                            <div class="contact-text">+91 7892880377</div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h5>Email Us</h5>
+                            <div class="contact-text">arpit.31093@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="termsModalLabel">
+                        <i class="fas fa-file-contract me-2"></i>Terms & Conditions
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="terms-item">
+                        <h6 style="color: var(--secondary-color);">Payment Terms</h6>
+                        <p>50% advance is required to begin the project. Remaining 50% due upon final delivery.</p>
+                    </div>
+
+                    <div class="terms-item">
+                        <h6 style="color: var(--secondary-color);">Support</h6>
+                        <p>1 week of free support post-delivery (minor edits/fixes included).</p>
+                    </div>
+
+                    <div class="terms-item">
+                        <h6 style="color: var(--secondary-color);">Additional Costs</h6>
+                        <p>Hosting & domain charges are not included in the above pricing.</p>
+                    </div>
+
+                    <div class="terms-item">
+                        <h6 style="color: var(--secondary-color);">Revisions</h6>
+                        <p>Any major revisions or feature additions may affect cost and delivery time.</p>
+                    </div>
+
+                    <div class="terms-item">
+                        <h6 style="color: var(--secondary-color);">Project Timeline</h6>
+                        <p>Standard delivery time ranges from 3-7 business days depending on project complexity.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="#contact" class="btn btn-primary" data-bs-dismiss="modal">
+                        <i class="fas fa-handshake me-2"></i>Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-md-start text-center">
+                    <p>&copy; 2025 Webify with Arpit. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end text-center">
+                    <p>Bringing Your Website Vision to Life</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            mirror: false
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                // Do not prevent default for modal toggles
+                if (this.dataset.bsToggle === 'modal') return;
+
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(10, 14, 39, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(10, 14, 39, 0.95)';
+            }
+        });
+
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', function () {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                const rate = scrolled * -0.5;
+                // hero.style.transform = `translateY(${rate}px)`; // This can cause jitter on some browsers, disabled for now
+            }
+        });
+
+        // Enhanced 3D tilt effect for service cards
+        const serviceCards = document.querySelectorAll('.service-card');
+        serviceCards.forEach((card, index) => {
+            card.addEventListener('mousemove', function (e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const rotateX = (y - centerY) / 15;
+                const rotateY = (centerX - x) / 15;
+
+                this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+            });
+
+            card.addEventListener('mouseleave', function () {
+                this.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+            });
+        });
+
+        // Enhanced 3D tilt effect for pricing cards
+        const pricingCards = document.querySelectorAll('.pricing-card');
+        pricingCards.forEach(card => {
+            card.addEventListener('mousemove', function (e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const rotateX = (y - centerY) / 12;
+                const rotateY = (centerX - x) / 12;
+
+                this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+            });
+
+            card.addEventListener('mouseleave', function () {
+                this.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+            });
+        });
+
+        // Add typing effect to hero title
+        function typeWriter(element, text, speed = 150) {
+    let i = 0;
+    element.innerHTML = ''; // Clear the content initially
+    element.style.opacity = '0'; // Start with invisible text
+
+    function type() {
+        if (i === 0) {
+            element.style.transition = 'opacity 0.5s ease-in-out';
+            element.style.opacity = '1'; // Fade in effect
+        }
+
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i); // Add one character at a time
+            i++;
+            setTimeout(type, speed); // Delay between each character
+        } else {
+            setTimeout(() => {
+                element.style.opacity = '0'; // Fade out effect
+                setTimeout(() => {
+                    element.innerHTML = ''; // Clear the text after fade-out
+                    i = 0; // Reset the index
+                    type(); // Restart the typing effect
+                }, 500); // Delay before restarting
+            }, 1000); // Delay before fade-out
+        }
+    }
+    type();
+}
+
+// Initialize typing effect when page loads
+window.addEventListener('load', function () {
+    const heroTitle = document.querySelector('.hero-title');
+    if (heroTitle) {
+        typeWriter(heroTitle, 'Webify', 150); // Pass "Webify" as the text to type
+    }
+});
+        // Add loading animation
+        window.addEventListener('load', function () {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease-in-out';
+
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Add scroll progress indicator
+        window.addEventListener('scroll', function () {
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.body.offsetHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+
+            let progressBar = document.querySelector('.scroll-progress');
+            if (!progressBar) {
+                progressBar = document.createElement('div');
+                progressBar.className = 'scroll-progress';
+                progressBar.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 0%;
+                    height: 3px;
+                    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+                    z-index: 9999;
+                    transition: width 0.1s ease;
+                `;
+                document.body.appendChild(progressBar);
+            }
+
+            progressBar.style.width = scrollPercent + '%';
+        });
+
+        // Add intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for scroll animations
+        document.addEventListener('DOMContentLoaded', function () {
+            const elementsToObserve = document.querySelectorAll('.service-card, .pricing-card, .feature-item');
+            elementsToObserve.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+
+        // Contact Form Handling
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            // Show loading state
+            const submitBtn = form.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+            submitBtn.disabled = true;
+
+            // Submit the form to Web3Forms
+            fetch(form.action, {
+                method: form.method,
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    const statusMessage = document.createElement('p');
+                    statusMessage.style.marginTop = '1rem';
+                    statusMessage.style.fontWeight = 'bold';
+
+                    if (data.success) {
+                        statusMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+                        statusMessage.style.color = 'green';
+                        form.reset();
+                    } else {
+                        statusMessage.textContent = 'There was an error sending your message. Please try again later.';
+                        statusMessage.style.color = 'red';
+                    }
+
+                    form.appendChild(statusMessage);
+                })
+                .catch(() => {
+                    const statusMessage = document.createElement('p');
+                    statusMessage.textContent = 'There was an error sending your message. Please try again later.';
+                    statusMessage.style.color = 'red';
+                    statusMessage.style.marginTop = '1rem';
+                    statusMessage.style.fontWeight = 'bold';
+                    form.appendChild(statusMessage);
+                })
+                .finally(() => {
+                    // Reset button state
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                });
+        });
+
+        // Dynamic stats counter
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target + (element.dataset.suffix || '');
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.ceil(start) + (element.dataset.suffix || '');
+                }
+            }, 16);
+        }
+
+        // Initialize stats animation when they come into view
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.stat-number');
+                    counters.forEach(counter => {
+                        // **FIX**: Check for 'no-animate' class and skip if present
+                        if (counter.classList.contains('no-animate')) {
+                            return;
+                        }
+
+                        const target = parseInt(counter.textContent.replace(/\D/g, ''));
+                        counter.dataset.suffix = counter.textContent.replace(/[0-9]/g, '');
+
+                        if (!isNaN(target)) {
+                            animateCounter(counter, target);
+                        }
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        // Observe portfolio stats section
+        document.addEventListener('DOMContentLoaded', function () {
+            const statsSection = document.querySelector('#portfolio .row.mt-5');
+            if (statsSection) {
+                statsObserver.observe(statsSection);
+            }
+        });
+
+        // Enhanced floating animation for background elements
+        function createFloatingElement(type, content) {
+            const element = document.createElement('div');
+            element.className = `floating-${type}`;
+            element.textContent = content;
+            element.style.cssText = `
+                position: absolute;
+                font-family: 'Courier New', monospace;
+                color: rgba(74, 144, 226, 0.1);
+                font-size: ${Math.random() * 10 + 10}px;
+                left: ${Math.random() * 100}%;
+                top: ${Math.random() * 100}%;
+                animation: float ${Math.random() * 10 + 15}s ease-in-out infinite;
+                animation-delay: ${Math.random() * 5}s;
+                pointer-events: none;
+                z-index: -1;
+            `;
+            return element;
+        }
+
+        // Add more dynamic background elements
+        document.addEventListener('DOMContentLoaded', function () {
+            const bgAnimation = document.querySelector('.bg-animation');
+            const techElements = [
+                'npm install', 'git commit', 'yarn build', 'webpack', 'babel',
+                'const app = {}', 'export default', 'async/await', 'Promise.all()',
+                'useState()', 'useEffect()', 'componentDidMount()', 'render()',
+                'display: flex', 'grid-template', 'transform: scale()', 'opacity: 1'
+            ];
+
+            for (let i = 0; i < 8; i++) {
+                const element = createFloatingElement('tech', techElements[Math.floor(Math.random() * techElements.length)]);
+                bgAnimation.appendChild(element);
+            }
+        });
+    </script>
+</body>
+
+</html>
