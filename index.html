@@ -8,6 +8,15 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZGQ3WZ4VT6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZGQ3WZ4VT6');
+    </script>
     <style>
         * {
             margin: 0;
@@ -1404,7 +1413,7 @@
                                 of our latest work including e-commerce sites, restaurant websites, and
                                 innovative web applications.
                             </p>
-                    
+
                             <div class="portfolio-links">
                                 <a href="#contact" class="portfolio-btn primary">
                                     <i class="fas fa-handshake me-2"></i>Work With Us
@@ -1810,41 +1819,41 @@
 
         // Add typing effect to hero title
         function typeWriter(element, text, speed = 150) {
-    let i = 0;
-    element.innerHTML = ''; // Clear the content initially
-    element.style.opacity = '0'; // Start with invisible text
+            let i = 0;
+            element.innerHTML = ''; // Clear the content initially
+            element.style.opacity = '0'; // Start with invisible text
 
-    function type() {
-        if (i === 0) {
-            element.style.transition = 'opacity 0.5s ease-in-out';
-            element.style.opacity = '1'; // Fade in effect
+            function type() {
+                if (i === 0) {
+                    element.style.transition = 'opacity 0.5s ease-in-out';
+                    element.style.opacity = '1'; // Fade in effect
+                }
+
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i); // Add one character at a time
+                    i++;
+                    setTimeout(type, speed); // Delay between each character
+                } else {
+                    setTimeout(() => {
+                        element.style.opacity = '0'; // Fade out effect
+                        setTimeout(() => {
+                            element.innerHTML = ''; // Clear the text after fade-out
+                            i = 0; // Reset the index
+                            type(); // Restart the typing effect
+                        }, 500); // Delay before restarting
+                    }, 1000); // Delay before fade-out
+                }
+            }
+            type();
         }
 
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i); // Add one character at a time
-            i++;
-            setTimeout(type, speed); // Delay between each character
-        } else {
-            setTimeout(() => {
-                element.style.opacity = '0'; // Fade out effect
-                setTimeout(() => {
-                    element.innerHTML = ''; // Clear the text after fade-out
-                    i = 0; // Reset the index
-                    type(); // Restart the typing effect
-                }, 500); // Delay before restarting
-            }, 1000); // Delay before fade-out
-        }
-    }
-    type();
-}
-
-// Initialize typing effect when page loads
-window.addEventListener('load', function () {
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        typeWriter(heroTitle, 'Webify', 150); // Pass "Webify" as the text to type
-    }
-});
+        // Initialize typing effect when page loads
+        window.addEventListener('load', function () {
+            const heroTitle = document.querySelector('.hero-title');
+            if (heroTitle) {
+                typeWriter(heroTitle, 'Webify', 150); // Pass "Webify" as the text to type
+            }
+        });
         // Add loading animation
         window.addEventListener('load', function () {
             document.body.style.opacity = '0';
